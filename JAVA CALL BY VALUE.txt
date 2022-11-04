@@ -1,0 +1,67 @@
+
+1) Parameter passing program in java
+//Call by value
+class CallByValue { 
+  
+    // Function to change the value 
+    // of the parameters 
+    public static void Example(int x, int y) 
+    { 
+        x++; 
+        y++; 
+    } 
+}  
+class Main { 
+    public static void main(String[] args) 
+    { 
+  
+        int a = 10; 
+        int b = 20; 
+  
+        // Instance of class is created 
+        CallByValue object = new CallByValue(); 
+  
+        System.out.println("Value of a: " + a + " & b: " + b); 
+  
+        // Passing variables in the class function 
+        object.Example(a, b); 
+  
+        // Displaying values after 
+        // calling the function 
+        System.out.println("Value of a: " + a + " & b: " + b); 
+    } 
+} 
+
+Output:
+Value of a: 10 & b: 20
+Value of a: 10 & b: 20
+
+//Call by Reference
+class CallByReference { 
+  
+    int a, b; 
+  
+    // Function to assign the value 
+    // to the class variables 
+    CallByReference(int x, int y) 
+    { 
+        a = x; 
+        b = y; 
+    } 
+  
+    // Changing the values of class variables 
+    void ChangeValue(CallByReference obj) 
+    { 
+        obj.a += 10; 
+        obj.b += 20; 
+        obj2 = obj1.incrByTen();
+        
+        System.out.println("obj1.a : " + obj1.a);
+        System.out.println("obj2.a : " + obj2.a);
+        
+        obj2 = obj2.incrByTen();
+        
+        System.out.println("obj2.a after second increase : " + obj2.a);
+        
+    }
+}
